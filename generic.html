@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Analysis Project Report</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            color: black; /* Changed headline color */
+        }
+
+        header {
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 20px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .btn-section {
+            margin: 10px;
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn-section:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        footer {
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .modal-header {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .modal-body {
+            background-color: #f8f9fa;
+        }
+
+        .project-content {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        .buttons {
+            flex: 1;
+        }
+
+        .content {
+            flex: 3;
+            padding-left: 20px;
+        }
+
+        .content img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <header class="text-center mb-5">
+            <h1>Financial Analysis of JPMorgan Chase & Stock Price Correlation</h1>
+            <p class="lead">Project Report by Harsh Ranglani</p>
+        </header>
+        
+        <div class="project-content">
+            <div class="buttons text-center">
+                <button class="btn btn-primary btn-section" onclick="showSection('overview')">Overview</button>
+                <button class="btn btn-primary btn-section" onclick="showSection('data-collection')">Data Collection</button>
+                <button class="btn btn-primary btn-section" onclick="showSection('data-analysis')">Data Analysis</button>
+                <button class="btn btn-primary btn-section" onclick="showSection('visualizations')">Visualizations</button>
+                <button class="btn btn-primary btn-section" onclick="showSection('key-findings')">Key Findings</button>
+            </div>
+            <div class="content">
+                <div id="overview" class="section">
+                    <h2>Overview</h2>
+                    <p>This project analyzes the relationship between the quarterly net income of JPMorgan Chase and its average stock prices from 2022 to 2024. The goal is to examine the correlation between net income and stock prices and provide visualizations to illustrate this relationship.</p>
+                </div>
+                <div id="data-collection" class="section" style="display: none;">
+                    <h2>Data Collection</h2>
+                    <p>We collected quarterly financial statements focusing on net income, revenue, assets, and liabilities. Additionally, historical stock prices were obtained from Yahoo Finance and resampled to quarterly data.</p>
+                </div>
+                <div id="data-analysis" class="section" style="display: none;">
+                    <h2>Data Analysis</h2>
+                    <p>The correlation analysis between net income and average stock prices was conducted, and key findings were derived based on this analysis. Here are the main steps taken:</p>
+                    <ol>
+                        <li>Data Cleaning and Preprocessing</li>
+                        <li>Merging Financial Data with Stock Prices</li>
+                        <li>Correlation Calculation</li>
+                        <li>Visualization of Results</li>
+                    </ol>
+                </div>
+                <div id="visualizations" class="section" style="display: none;">
+                    <h2>Visualizations</h2>
+                    <p>The following visualizations were created to illustrate the relationship between financial metrics and stock performance:</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3>Quarterly Net Income and Average Stock Prices Line Plot</h3>
+                            <img src="images/Line_plot.png" class="img-fluid" alt="Line Plot">
+                        </div>
+                        <div class="col-md-6">
+                            <h3>Correlation between Net Income and Average Stock Prices Scatter Plot</h3>
+                            <img src="images/scatter_plot.png" class="img-fluid" alt="Scatter Plot">
+                        </div>
+                    </div>
+                </div>
+                <div id="key-findings" class="section" style="display: none;">
+                    <h2>Key Findings</h2>
+                    <p>Our analysis revealed a strong positive correlation (0.85) between net income and stock prices. Both metrics showed a rising trend from Q1 2022 to Q3 2024, indicating that financial performance significantly influences stock market valuation.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Harsh Ranglani. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            var selectedSection = document.getElementById(sectionId);
+            selectedSection.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

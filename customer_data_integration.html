@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Data Integration System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff !important;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .list-group-item-action {
+            color: #ffffff;
+            background-color: #007bff;
+            border: 1px solid #007bff;
+        }
+        .list-group-item-action:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">My Projects</a>
+    </nav>
+
+    <div class="container">
+        <h1 class="text-center">Customer Data Integration System</h1>
+        <p class="text-center">Project Report by Harsh Ranglani</p>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="list-group">
+                    <a href="#overview" class="list-group-item list-group-item-action btn-primary" onclick="showSection('overview')">Overview</a>
+                    <a href="#dataCollection" class="list-group-item list-group-item-action btn-primary" onclick="showSection('dataCollection')">Data Collection</a>
+                    <a href="#dataIntegration" class="list-group-item list-group-item-action btn-primary" onclick="showSection('dataIntegration')">Data Integration</a>
+                    <a href="#systemArchitecture" class="list-group-item list-group-item-action btn-primary" onclick="showSection('systemArchitecture')">System Architecture</a>
+                    <a href="#implementation" class="list-group-item list-group-item-action btn-primary" onclick="showSection('implementation')">Implementation</a>
+                    <a href="#keyFindings" class="list-group-item list-group-item-action btn-primary" onclick="showSection('keyFindings')">Key Findings</a>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div id="overview" class="section active">
+                    <h2>Overview</h2>
+                    <p>This project involves the integration of customer data from various sources into a centralized system. The goal is to ensure consistency, accuracy, and accessibility of the data for improved insights and decision-making. By consolidating data from CRM systems, e-commerce platforms, and social media, we aim to create a comprehensive view of the customer, enabling better customer service and targeted marketing efforts.</p>
+                </div>
+                <div id="dataCollection" class="section">
+                    <h2>Data Collection</h2>
+                    <p>We collected data from multiple sources, including CRM systems, e-commerce platforms, and social media channels. The CRM data included customer profiles, contact information, and interaction history. The e-commerce data comprised purchase history, product preferences, and transaction details. Social media data provided insights into customer sentiment, engagement, and demographic information. This diverse dataset provided a holistic view of the customer across different touchpoints.</p>
+                </div>
+                <div id="dataIntegration" class="section">
+                    <h2>Data Integration</h2>
+                    <p>The data integration process involved several key steps:</p>
+                    <ul>
+                        <li><strong>Data Cleaning:</strong> Ensuring that the data is free from errors and inconsistencies. This included handling missing values, correcting data types, and removing duplicates.</                        <li><strong>Data Transformation:</strong> Standardizing data formats and aligning fields from different sources. This involved mapping fields to a common schema and performing necessary transformations to ensure compatibility.</li>
+                        <li><strong>Data Loading:</strong> Loading the cleaned and transformed data into a centralized database. We used an ETL (Extract, Transform, Load) pipeline to automate this process and ensure data consistency.</li>
+                    </ul>
+                </div>
+                <div id="systemArchitecture" class="section">
+                    <h2>System Architecture</h2>
+                    <p>The system architecture was designed to support scalability, reliability, and ease of access. The key components included:</p>
+                    <ul>
+                        <li><strong>ETL Pipeline:</strong> A robust ETL pipeline built using Python and SQL to automate the extraction, transformation, and loading of data from various sources into the centralized database.</li>
+                        <li><strong>Centralized Database:</strong> A relational database hosted on AWS RDS to store the integrated customer data. The database schema was designed to support efficient querying and reporting.</li>
+                        <li><strong>API Layer:</strong> An API layer built using AWS API Gateway and Lambda to provide secure and scalable access to the integrated data for various applications and services.</li>
+                    </ul>
+                </div>
+                <div id="implementation" class="section">
+                    <h2>Implementation</h2>
+                    <p>The implementation involved the following steps:</p>
+                    <ul>
+                        <li><strong>Data Extraction:</strong> Extracting data from CRM systems, e-commerce platforms, and social media channels using APIs and data connectors.</li>
+                        <li><strong>Data Cleaning and Transformation:</strong> Applying data cleaning and transformation rules to ensure data consistency and accuracy.</li>
+                        <li><strong>Data Loading:</strong> Loading the cleaned and transformed data into the centralized database using SQL scripts and ETL tools.</li>
+                        <li><strong>API Development:</strong> Developing APIs to provide secure access to the integrated data for various applications and services.</li>
+                        <li><strong>Testing and Validation:</strong> Conducting thorough testing and validation to ensure the accuracy and reliability of the integrated data.</li>
+                    </ul>
+                </div>
+                <div id="keyFindings" class="section">
+                    <h2>Key Findings</h2>
+                    <p>The implementation of the Customer Data Integration System resulted in several key benefits:</p>
+                    <ul>
+                        <li><strong>Improved Data Accuracy:</strong> By integrating data from multiple sources and applying data cleaning rules, we significantly improved the accuracy of the customer data.</li>
+                        <li><strong>Enhanced Customer Insights:</strong> The integrated data provided a comprehensive view of the customer, enabling deeper insights into customer behavior, preferences, and needs.</li>
+                        <li><strong>Operational Efficiency:</strong> The centralized data system reduced the time and effort required to access and analyze customer data, leading to improved operational efficiency.</li>
+                        <li><strong>Better Customer Segmentation:</strong> The integrated data enabled more effective customer segmentation, allowing for targeted marketing campaigns and personalized customer experiences.</li>
+                        <li><strong>Scalability and Flexibility:</strong> The system architecture supported scalability and flexibility, allowing for future growth and the addition of new data sources as needed.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
