@@ -1,32 +1,79 @@
 <!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Harsh Ranglani Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+    <title>Harsh Ranglani Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <style>
+        /* Style for the mobile menu toggle button */
+        #menuToggle {
+            display: none;
+        }
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome to My World</a></li>
-							<li><a href="#one">My Projects</a></li>
-							<li><a href="#two">What I do</a></li>
-							<li><a href="#three">Get in touch</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+        #menuToggle label {
+            display: block;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #menuToggle input {
+            display: none;
+        }
+
+        #menuToggle input:checked ~ nav ul {
+            display: block;
+        }
+
+        /* Mobile menu styles */
+        @media (max-width: 768px) {
+            #sidebar {
+                position: relative;
+                width: 100%;
+            }
+
+            #sidebar .inner {
+                display: none;
+                background-color: #333;
+                width: 100%;
+                text-align: center;
+            }
+
+            #menuToggle {
+                display: block;
+            }
+        }
+
+        /* Desktop menu styles */
+        @media (min-width: 769px) {
+            #sidebar .inner {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <!-- Sidebar -->
+    <section id="sidebar">
+        <div id="menuToggle">
+            <label for="toggle">☰ Menu</label>
+            <input type="checkbox" id="toggle">
+        </div>
+        <div class="inner">
+            <nav>
+                <ul>
+                    <li><a href="#intro">Welcome to My World</a></li>
+                    <li><a href="#one">My Projects</a></li>
+                    <li><a href="#two">What I do</a></li>
+                    <li><a href="#three">Get in touch</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -35,7 +82,7 @@
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
 							<h1>Harsh Ranglani</h1>
-							<p>Results-driven professional with a proven track record in business transformation and process optimization within the financial
+							<p>Results-driven data engineer with a proven track record in business transformation and process optimization within the financial
 services sector. Expert in leveraging data analytics, strategic planning, and cross-functional team leadership to drive
 efficiency and profitability. Adept at managing stakeholder relationships and aligning technical solutions with business goals. <a href="https://www.linkedin.com/in/harsh-ranglani-76694120a/">LinkedIn</a>.</p>
 							<ul class="actions">
@@ -46,32 +93,128 @@ efficiency and profitability. Adept at managing stakeholder relationships and al
 
 				<!-- One -->
 					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<a href="#" class="image"><img src="images/financialanalysis.jpg" alt=""data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Stock Price Correlation</h2>
-									<p>This project analyzes the relationship between the quarterly net income of JPMorgan Chase and its average stock prices from 2022 to 2024.
-									</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
+						<section id="financial_analysis" class="wrapper style3 fade-up">
+							<div class="inner">
+								<h2>Financial Analysis Project Report</h2>
+								<p>The Financial Analysis project involves analyzing the correlation between JPMorgan Chase's quarterly net income and its average stock prices from 2022 to 2024. The objective is to understand the relationship between the company's financial performance and its stock market performance, providing insights for investors and stakeholders.</p>
+						
+								<h3>Project Overview</h3>
+								<p>This project addresses the need for detailed financial analysis to gauge the impact of the company's financial health on its stock prices. By analyzing the quarterly net income and average stock prices, the project aims to identify patterns and correlations that can inform investment decisions.</p>
+						
+								<h3>Project Objectives</h3>
+								<ul>
+									<li>Analyze the correlation between JPMorgan Chase's quarterly net income and its average stock prices.</li>
+									<li>Identify patterns and trends in the company's financial performance and stock prices.</li>
+									<li>Provide insights for investors and stakeholders regarding the relationship between financial health and stock market performance.</li>
+									<li>Develop a comprehensive report detailing the findings and implications of the analysis.</li>
+								</ul>
+						
+								<h3>Project Details</h3>
+								<p>The project is divided into the following stages:</p>
+								<ul>
+									<li><strong>Data Collection:</strong> Gathering quarterly net income and average stock price data for JPMorgan Chase from 2022 to 2024.</li>
+									<li><strong>Data Preparation:</strong> Cleaning and preparing the data for analysis, ensuring accuracy and consistency.</li>
+									<li><strong>Data Analysis:</strong> Conducting statistical analysis to identify correlations and patterns between net income and stock prices.</li>
+									<li><strong>Visualization:</strong> Creating visual representations of the data and analysis results to aid in understanding and presentation.</li>
+									<li><strong>Reporting:</strong> Compiling the analysis and findings into a detailed report, including implications and recommendations.</li>
+								</ul>
+						
+								<h3>Technologies Used</h3>
+								<ul>
+									<li>Python: For data analysis and statistical computations.</li>
+									<li>Pandas: For data manipulation and preparation.</li>
+									<li>Matplotlib and Seaborn: For data visualization and graphical representation of findings.</li>
+									<li>Excel: For data collection and initial preparation.</li>
+								</ul>
+						
+								<h3>Results and Achievements</h3>
+								<p>The analysis revealed a significant correlation between JPMorgan Chase's quarterly net income and its average stock prices. Key achievements include:</p>
+								<ul>
+									<li>Successfully identified patterns and trends in the company's financial performance and stock prices.</li>
+									<li>Provided actionable insights for investors and stakeholders.</li>
+									<li>Developed a comprehensive report detailing the analysis and findings.</li>
+								</ul>
+						
+								<h3>Challenges and Solutions</h3>
+								<p>During the project, several challenges were encountered, including:</p>
+								<ul>
+									<li><strong>Data Accuracy:</strong> Ensured by thorough data cleaning and validation processes.</li>
+									<li><strong>Data Consistency:</strong> Addressed by standardizing data formats and handling missing values appropriately.</li>
+									<li><strong>Analysis Complexity:</strong> Managed by applying robust statistical methods and leveraging advanced data visualization techniques.</li>
+								</ul>
+						
+								<h3>Future Enhancements</h3>
+								<p>Potential future enhancements for the project include:</p>
+								<ul>
+									<li>Expanding the analysis to include other financial metrics and their impact on stock prices.</li>
+									<li>Integrating real-time data for more dynamic and up-to-date analysis.</li>
+									<li>Automating data collection and analysis processes to improve efficiency.</li>
+								</ul>
 							</div>
 						</section>
-						<section>
-							<a href="#" class="image"><img src="images/cdi3.jpg" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Customer Data Integration</h2>
-									<p>This project aims to streamline the process of integrating customer data from multiple sources into a centralized database. This system ensures data consistency, accuracy, and accessibility, facilitating improved customer insights and decision-making.</p>
-									<ul class="actions">
-										<li><a href="customer_data_integration.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</section>
+						
+						<!-- Project Report Page -->
+			<section id="customer_data_integration" class="wrapper style3 fade-up">
+				<div class="inner">
+					<h2>Customer Data Integration Project Report</h2>
+					<p>The Customer Data Integration project involves integrating customer data from various sources into a single cohesive database using Azure Data Factory. The objective is to streamline data management, enhance data accessibility, and ensure data consistency for better analysis and reporting.</p>
+					
+					<h3>Project Overview</h3>
+					<p>The project addresses the challenges of managing customer data from different sources, including inconsistent data formats, redundant entries, and inaccessible data. By integrating the data into a centralized database, the project aims to improve data quality and facilitate comprehensive customer insights.</p>
+					
+					<h3>Project Objectives</h3>
+					<ul>
+						<li>Integrate customer data from multiple sources into a centralized database.</li>
+						<li>Ensure data consistency and accuracy across all sources.</li>
+						<li>Improve data accessibility for analysis and reporting.</li>
+						<li>Streamline the data management process.</li>
+					</ul>
+
+					<h3>Project Details</h3>
+					<p>The project is divided into the following stages:</p>
+					<ul>
+						<li><strong>Setting up Azure Infrastructure:</strong> Configuring the necessary Azure resources, including Azure Data Factory, Azure SQL Database, and storage accounts.</li>
+						<li><strong>Creating and Configuring Data Factory Pipelines:</strong> Designing and implementing data pipelines to extract, transform, and load (ETL) data from various sources.</li>
+						<li><strong>Data Integration and Transformation:</strong> Integrating data from CSV files, Excel files, and SQL databases, and applying necessary transformations to ensure data consistency.</li>
+						<li><strong>Loading Data into Azure SQL Database:</strong> Loading the transformed data into an Azure SQL Database for centralized storage and management.</li>
+						<li><strong>Validation and Testing:</strong> Conducting thorough validation and testing to ensure data accuracy and consistency.</li>
+					</ul>
+
+					<h3>Technologies Used</h3>
+					<ul>
+						<li>Azure Data Factory: For designing and managing ETL pipelines.</li>
+						<li>Azure SQL Database: For centralized storage and management of integrated data.</li>
+						<li>SQL: For querying and manipulating data.</li>
+						<li>Python: For data transformation and validation scripts.</li>
+						<li>CSV and Excel Files: As data sources for integration.</li>
+					</ul>
+
+					<h3>Results and Achievements</h3>
+					<p>The integrated data provides a unified view of customer information, enabling better analysis and decision-making. Key achievements include:</p>
+					<ul>
+						<li>Successfully integrated data from three different sources.</li>
+						<li>Streamlined data transformation processes.</li>
+						<li>Enhanced data accessibility for business intelligence purposes.</li>
+						<li>Improved data quality and consistency.</li>
+					</ul>
+
+					<h3>Challenges and Solutions</h3>
+					<p>During the project, several challenges were encountered, including:</p>
+					<ul>
+						<li><strong>Data Inconsistency:</strong> Addressed by applying data transformation rules and validation checks.</li>
+						<li><strong>Data Redundancy:</strong> Managed by implementing deduplication logic in the ETL pipelines.</li>
+						<li><strong>Data Accessibility:</strong> Enhanced by centralizing data storage in Azure SQL Database.</li>
+					</ul>
+
+					<h3>Future Enhancements</h3>
+					<p>Potential future enhancements for the project include:</p>
+					<ul>
+						<li>Implementing real-time data integration using streaming data sources.</li>
+						<li>Expanding the scope to include additional data sources.</li>
+						<li>Automating data validation and quality checks.</li>
+					</ul>
+				</div>
+			</section>
 
 				<!-- Two -->
 					<section id="two" class="wrapper style3 fade-up">
@@ -95,19 +238,19 @@ efficiency and profitability. Adept at managing stakeholder relationships and al
 									<p>Leveraged Generative AI technologies, including GitHub Copilot, to enhance efficiency and innovation in project</p>
 								</section>
 								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3>Java</h3>
-									<p>Majorly used Java for various projects at current organization.</p>
+									<span class="icon major fa-gem"></span>
+									<h3>Microsoft Azure</h3>
+									<p>Azure Data Facory, Azure SQL Databases, Pipelines, Virtual Machine,Virtual Network</p>
 								</section>
 								<section>
 									<span class="icon solid major fa-link"></span>
-									<h3>PySpark</h3>
-									<p>Used for performing real-time, large-scale data processing in a distributed environment using Python.</p>
+									<h3>PySpark and Other Python Libraries </h3>
+									<p>Extensively used Pandas, Matplotlib, OpenCV, Seaborn</p>
 								</section>
 								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>Python Libraries</h3>
-									<p>Pandas,Matplotlib,OpenCV,Seaborn</p>
+									<span class="icon solid major fa-desktop"></span>
+									<h3>Java</h3>
+									<p>Majorly used Java for various projects at current organization.</p>
 								</section>
 							</div>
 						</div>
@@ -133,7 +276,9 @@ efficiency and profitability. Adept at managing stakeholder relationships and al
 										<li>
 											<h3>Social</h3>
 											<ul class="icons">
-												<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+												<li><a href="https://www.linkedin.com/in/harsh-ranglani-76694120a/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+												<li><a href="https://github.com/Harsh-R21" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+
 											</ul>
 										</li>
 									</ul>
@@ -148,7 +293,7 @@ efficiency and profitability. Adept at managing stakeholder relationships and al
 			<footer id="footer" class="wrapper style1-alt">
 				<div class="inner">
 					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; All rights reserved. @HarshRanglani</li>
 					</ul>
 				</div>
 			</footer>
