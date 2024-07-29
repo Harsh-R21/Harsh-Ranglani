@@ -1,93 +1,80 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-    <title>Harsh Ranglani Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <style>
-        /* Style for the mobile menu toggle button */
-        #menuToggle {
-            display: none;
-        }
-
-        #menuToggle label {
-            display: block;
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        #menuToggle input {
-            display: none;
-        }
-
-        #menuToggle input:checked ~ nav ul {
-            display: block;
-        }
-
-        /* Mobile menu styles */
-        @media (max-width: 768px) {
-            #sidebar {
-                position: relative;
-                width: 100%;
+    <head>
+        <title>Harsh Ranglani Portfolio</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+            /* Custom CSS for mobile view */
+            @media (max-width: 768px) {
+                #sidebar {
+                    position: fixed;
+                    bottom: 0;
+                    width: 100%;
+                    background: #2e3440;
+                    z-index: 9999;
+                }
+                #sidebar .inner {
+                    padding: 1em 1.5em;
+                }
+                #sidebar nav ul {
+                    display: flex;
+                    justify-content: space-around;
+                }
+                #sidebar nav ul li a {
+                    font-size: 0.9em;
+                }
             }
-
-            #sidebar .inner {
-                display: none;
-                background-color: #333;
-                width: 100%;
+            /* Custom CSS for intro section */
+            .intro-container {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
                 text-align: center;
             }
-
-            #menuToggle {
-                display: block;
+            .intro-image {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                margin-bottom: 20px;
             }
-        }
-
-        /* Desktop menu styles */
-        @media (min-width: 769px) {
-            #sidebar .inner {
-                display: block;
+            .intro-name {
+                font-size: 2.5em;
+                margin: 0;
+                margin-bottom: 20px;
             }
-        }
-    </style>
-</head>
-<body class="is-preload">
-    <!-- Sidebar -->
-    <section id="sidebar">
-        <div id="menuToggle">
-            <label for="toggle">☰ Menu</label>
-            <input type="checkbox" id="toggle">
-        </div>
-        <div class="inner">
-            <nav>
-                <ul>
-                    <li><a href="#intro">Welcome to My World</a></li>
-                    <li><a href="#one">My Projects</a></li>
-                    <li><a href="#two">What I do</a></li>
-                    <li><a href="#three">Get in touch</a></li>
-                </ul>
-            </nav>
-        </div>
-    </section>
+        </style>
+    </head>
+    <body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+        <!-- Sidebar -->
+        <section id="sidebar">
+            <div class="inner">
+                <nav>
+                    <ul>
+                        <li><a href="#intro">Welcome to My World</a></li>
+                        <li><a href="#one">My Projects</a></li>
+                        <li><a href="#two">What I do</a></li>
+                        <li><a href="#three">Get in touch</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>Harsh Ranglani</h1>
+        <!-- Wrapper -->
+        <div id="wrapper">
+
+            <!-- Intro -->
+            <section id="intro" class="wrapper style1 fullscreen fade-up">
+                <div class="inner">
+                    <div class="intro-container">
+                        <img src="images/myimage.png" alt="Harsh Ranglani" class="intro-image">
+                        <h1 class="intro-name">Harsh Ranglani</h1>
 							<p>Results-driven data engineer with a proven track record in business transformation and process optimization within the financial
 services sector. Expert in leveraging data analytics, strategic planning, and cross-functional team leadership to drive
 efficiency and profitability. Adept at managing stakeholder relationships and aligning technical solutions with business goals. <a href="https://www.linkedin.com/in/harsh-ranglani-76694120a/">LinkedIn</a>.</p>
-							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Learn more</a></li>
-							</ul>
 						</div>
 					</section>
 
